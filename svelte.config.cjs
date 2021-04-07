@@ -1,4 +1,4 @@
-const begin = require('@sveltejs/adapter-begin');
+const begin = require('@sveltejs/adapter-begin').default;
 const pkg = require('./package.json');
 
 /** @type {import('@sveltejs/kit').Config} */
