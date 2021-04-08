@@ -4,14 +4,13 @@
 	"scripts": {
 		"build": "rollup -c",
 		"dev": "rollup -c -w",
-		"lint": "eslint src --fix",
+		"lint": "prettier --check .",
+		"format": "prettier --write .",
 		"start": "npx sandbox"
 	},
 	"devDependencies": {
 		"@rollup/plugin-commonjs": "^17.0.0",
 		"@rollup/plugin-node-resolve": "^11.0.0",
-		"eslint": "^7.19.0",
-		"eslint-plugin-svelte3": "",
 		"rollup": "^2.40.0",
 		"rollup-plugin-css-only": "^3.1.0",
 		"rollup-plugin-livereload": "^2.0.0",
