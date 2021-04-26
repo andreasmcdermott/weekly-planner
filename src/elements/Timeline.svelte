@@ -27,13 +27,15 @@
         justify-content: stretch;
         align-items: flex-start;
         z-index: 2;
+        padding-left: 1px;
+        pointer-events: none;
     }
 
 	.timeline {
 		display: flex;
 		flex-direction: column;
         height: 100%;
-        width: 100%;
+        width: calc(100% - 0.5in - 1px);
 	}
 
     .hour {
@@ -46,8 +48,10 @@
     }
 
     .label {
-        font-size: 0.65rem;
+        font-size: 0.66rem;
         padding: 0 0.25rem;
         display: block;
+        position: absolute;
+        right: 100%;
     }
 </style>

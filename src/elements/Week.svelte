@@ -1,12 +1,30 @@
 <script>
 	import Day from './Day.svelte';
-    
-	const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+
+	export let date = new Date();
+
+	let days = [];
+	$: {
+		days.push(new Date(date));
+		for (let i = 0; i < 4; ++i) {
+			date.setDate(date.getDate() + 1);
+			days.push(new Date(date));
+		}
+	}
+
+	const events = [
+		{
+			title: 'Event!!!',
+			color: 'pink',
+			startTime: new Date(),
+			endTime: new Date().setHours(new Date().getHours() + 1)
+		}
+	];
 </script>
 
 <div class="week">
-	{#each days as day}
-		<Day {day} />
+	{#each days as date, i}
+		<Day {date} {events} index={i + 1} />
 	{/each}
 </div>
 

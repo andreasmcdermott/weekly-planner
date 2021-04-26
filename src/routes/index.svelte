@@ -10,8 +10,10 @@
 
 <style>
 	main {
-		width: 8in;
-		height: 10in;
+		width: 7.5in;
+		height: 9in;
 		position: relative;
+		overflow: hidden;
+		padding-left: 0.5in;
 	}	
 </style>
