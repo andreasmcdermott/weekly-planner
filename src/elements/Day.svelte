@@ -5,14 +5,12 @@
 	export let index;
 	export let date;
 	export let events = [];
-
-	const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 </script>
 
 <div class="day-container">
 	<Title>
-		{days[date.getDay()]}
-		<span class="subtitle">{date.getMonth() + 1}/{date.getDate()}</span>
+		{date.toLocaleDateString('en', { weekday: 'long' })}
+		<span class="subtitle">{date.toLocaleDateString('en', { month: 'numeric', day: 'numeric' })}</span>
 	</Title>
 
 	<div class="day" class:lastDay={index === 5}>

@@ -1,13 +1,12 @@
 <script>
     import Title from './Title.svelte';
-
-    const hours = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+    import { hours } from '../stores/week';
 </script>
 
 <div class="timeline-container">
     <Title />
     <div class="timeline">
-        {#each hours as hour}
+        {#each $hours as hour}
             <div class="hour">
                 <span class="label">
                     {hour}:00

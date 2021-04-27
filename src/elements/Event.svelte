@@ -1,6 +1,11 @@
 <script>
+    import { hours } from '../stores/week';
+
     export let event;
     export let lastDay = false
+
+    const numHours = ($hours[$hours.length - 1] - $hours[0]) + 1;
+    const heightPerHour = 100 / numHours;
 
     const start = '12%';
     const height = '5%';
